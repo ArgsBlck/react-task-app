@@ -5,7 +5,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
-
+### `cd Desktop`
+### `cd react-task-app`
 ### `npm start`
 
 Runs the app in the development mode.\
