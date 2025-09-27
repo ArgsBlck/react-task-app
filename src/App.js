@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
 import { AuthProvider } from './context/AuthContext';
+import './App.css';
 
 function App() {
   return (
