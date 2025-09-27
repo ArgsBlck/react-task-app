@@ -1,10 +1,13 @@
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 function Login() {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
 
   const onSubmit = async (data) => {
     try {
@@ -12,7 +15,7 @@ function Login() {
         `http://localhost:3001/users?email=${data.email}&password=${data.password}`
       );
       if (res.data.length > 0) {
-        localStorage.setItem('user', JSON.stringify(res.data[0]));
+        login(res.data[0]);
         navigate('/');
       } else {
         alert('Грешни имейл или парола');
