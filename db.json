@@ -1,4 +1,10 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "755a",
+      "email": "kaloqn0703@abv.bg",
+      "password": "123456"
+    }
+  ],
   "tasks": []
 }
